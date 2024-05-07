@@ -46,19 +46,19 @@ public class MainActivity extends AppCompatActivity {
                     dayOfRent = Integer.parseInt(dayOfRentStr);
                 }
 
-                double hargaSewaPerHari = 0;
+                double hargaMobil = 0;
                 switch (carType) {
                     case "Pajero":
-                        hargaSewaPerHari = 2400000;
+                        hargaMobil = 2400000;
                         break;
                     case "Alphard":
-                        hargaSewaPerHari = 1550000;
+                        hargaMobil = 1550000;
                         break;
                     case "Innova":
-                        hargaSewaPerHari = 850000;
+                        hargaMobil = 850000;
                         break;
                     case "Brio":
-                        hargaSewaPerHari = 550000;
+                        hargaMobil = 550000;
                         break;
                 }
 
@@ -68,27 +68,19 @@ public class MainActivity extends AppCompatActivity {
                         biayaTambahan = 250000;
                         break;
                     case "Inside":
-                        biayaTambahan = 0;
+                        biayaTambahan = 135000;
                         break;
                 }
 
-                double totalBiayaSewa = (hargaSewaPerHari * dayOfRent) + biayaTambahan;
+                double totalHarga = (hargaMobil * dayOfRent) + biayaTambahan;
 
-                double diskon = 0;
-                if (totalBiayaSewa > 10000000) {
-                    diskon = 0.07 * totalBiayaSewa;
-                } else if (totalBiayaSewa > 5000000) {
-                    diskon = 0.05 * totalBiayaSewa;
-                }
-
-                totalBiayaSewa -= diskon;
 
                 Intent intent = new Intent(MainActivity.this, DetailRentActivity.class);
                 intent.putExtra("carType", carType);
                 intent.putExtra("dayOfRent", dayOfRent);
-                intent.putExtra("hargaSewa", hargaSewaPerHari);
+                intent.putExtra("hargaMobil", hargaMobil);
                 intent.putExtra("biayaTambahan", biayaTambahan);
-                intent.putExtra("totalBiayaSewa", totalBiayaSewa);
+                intent.putExtra("totalBiayaSewa", totalHarga);
                 startActivity(intent);
             }
         });

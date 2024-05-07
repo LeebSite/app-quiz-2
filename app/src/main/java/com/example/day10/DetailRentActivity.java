@@ -10,31 +10,44 @@ public class DetailRentActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_rent);
 
-        // Receive data from MainActivity
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             String carType = extras.getString("carType");
             int dayOfRent = extras.getInt("dayOfRent");
-            double hargaSewa = extras.getDouble("hargaSewa");
+            double hargaMobil = extras.getDouble("hargaMobil");
             double biayaTambahan = extras.getDouble("biayaTambahan");
             double totalBiayaSewa = extras.getDouble("totalBiayaSewa");
+            String sewaType = extras.getString("sewaType"); // Mendapatkan nilai sewaType
 
-            // Display data in TextViews
+            String rentalType = "";
+            if (biayaTambahan > 0) {
+                rentalType = "Outside City: Rp ";
+            } else {
+                rentalType = "Inside City: Rp ";
+            }
+
             TextView textViewCarType = findViewById(R.id.tvCarType);
             textViewCarType.setText("Car Type: " + carType);
 
-            TextView textViewOutsideCity = findViewById(R.id.tvOutsideCity);
-            textViewOutsideCity.setText("Outside City: " + (biayaTambahan > 0 ? "Yes" : "No"));
+            TextView textViewOutsideCity = findViewById(R.id.tvCity);
+            textViewOutsideCity.setText(rentalType + String.format("%.0f", biayaTambahan));
 
             TextView textViewDayOfRent = findViewById(R.id.tvDayOfRent);
             textViewDayOfRent.setText("Day Of Rent: " + dayOfRent + " days");
 
             TextView textViewDiscount = findViewById(R.id.tvDiscount);
-            double discount = (hargaSewa * dayOfRent + biayaTambahan) * 0.05;
+            double discount = 0;
+            if (totalBiayaSewa > 10000000) {
+                discount = totalBiayaSewa * 0.07;
+            } else if (totalBiayaSewa > 5000000) {
+                discount = totalBiayaSewa * 0.05;
+            }
             textViewDiscount.setText("Discount: Rp " + String.format("%.0f", discount));
 
             TextView textViewTotal = findViewById(R.id.tvTotal);
-            textViewTotal.setText("Total: Rp " + String.format("%.0f", totalBiayaSewa));
+            double totalBiayaSetelahDiskon = totalBiayaSewa - discount;
+            textViewTotal.setText("Total: Rp " + String.format("%.0f", totalBiayaSetelahDiskon));
+
         }
     }
 }

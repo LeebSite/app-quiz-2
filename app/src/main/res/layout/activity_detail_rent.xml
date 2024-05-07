@@ -26,7 +26,7 @@
         android:paddingBottom="18dp"
         android:text="Ghalib Pradipa Quiz 2"
         android:textColor="@color/white"
-        android:textSize="15dp" />
+        android:textSize="17dp" />
 
     <TextView
         android:id="@+id/tvTransaction"
@@ -36,7 +36,7 @@
         android:fontFamily="@font/poppins_medium"
         android:paddingStart="20dp"
         android:text="Transaction Detail"
-        android:textSize="15sp"
+        android:textSize="19sp"
         android:textStyle="bold" />
 
     <LinearLayout
@@ -54,15 +54,14 @@
             android:layout_marginTop="20dp"
             android:fontFamily="@font/poppins_medium"
             android:text="Car Type : "
-            android:textSize="14sp" />
+            android:textSize="17sp" />
 
         <TextView
-            android:id="@+id/tvOutsideCity"
+            android:id="@+id/tvCity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_medium"
-            android:text="Outside City : "
-            android:textSize="14sp" />
+            android:textSize="17sp" />
 
         <TextView
             android:id="@+id/tvDayOfRent"
@@ -70,7 +69,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_medium"
             android:text="Day Of Rent : "
-            android:textSize="14sp" />
+            android:textSize="17sp" />
 
         <TextView
             android:id="@+id/tvDiscount"
@@ -78,7 +77,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_medium"
             android:text="Discount : "
-            android:textSize="14sp" />
+            android:textSize="17sp" />
 
         <TextView
             android:id="@+id/tvTotal"
@@ -86,7 +85,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_medium"
             android:text="Total : "
-            android:textSize="14sp"
+            android:textSize="17sp"
             android:textStyle="bold" />
 
     </LinearLayout>
@@ -95,9 +94,10 @@
         android:id="@+id/tvOutro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="19dp"
         android:fontFamily="@font/poppins_medium"
         android:paddingStart="20dp"
-        android:text="Terimakasih untuk sudah berbelanja disini" />
+        android:textSize="19sp"
+        android:text="Thank you for the transaction" />
 
 </LinearLayout>
