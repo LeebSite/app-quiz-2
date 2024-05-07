@@ -1,0 +1,182 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F6F5F5">
+
+    <TextView
+        android:id="@+id/tvNamaApp"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#124076"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center"
+        android:paddingTop="19dp"
+        android:text="Car Rent Leeb"
+        android:textColor="@color/white"
+        android:textSize="23dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:background="#124076"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="center"
+        android:paddingBottom="18dp"
+        android:text="Ghalib Pradipa Quiz 2"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/tvIntro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="center"
+        android:text="Selamat datang Car Rent Leeb"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvCarType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Car Type"
+        android:textSize="15sp" />
+
+    <RadioGroup
+        android:id="@+id/rgCarType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="16dp">
+
+        <RadioButton
+            android:id="@+id/rbPajero"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Pajero"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/rbAlphard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Alphard"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/rbInnova"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Innova"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/rbBrio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Brio"
+            android:textSize="15sp" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvOutsideCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Outside City"
+        android:textSize="15sp" />
+
+    <RadioGroup
+        android:id="@+id/rgOutsideCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="16dp">
+
+        <RadioButton
+            android:id="@+id/rbOutside"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Outside"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/rbInside"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Inside"
+            android:paddingRight="50dp"
+            android:textSize="15sp" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvJumlahHari"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Day Of Rent"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/etJumlahHari"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="16dp"
+        android:fontFamily="@font/poppins_medium"
+        android:hint="Masukkan Jumlah Hari"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnRent"
+        android:layout_width="200dp"
+        android:layout_height="55dp"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:backgroundTint="#124076"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Rent"
+        android:textColor="@android:color/white"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:backgroundTint="#6895D2"
+        android:text="Reset"
+        android:fontFamily="@font/poppins_medium"
+        android:onClick="resetData" />
+
+</LinearLayout>
